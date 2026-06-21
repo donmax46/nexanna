@@ -2,16 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>NEXANNA | Contact</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Contact | NEXANNA</title>
+
   <link rel="stylesheet" href="../assets/css/styles.css">
 </head>
 
 <body>
 
-  <!-- HEADER -->
   <header>
-    <h1>NEXANNA SYSTEM</h1>
+    <h1>NEXANNA</h1>
+
     <nav>
       <a href="../index.html">Home</a>
       <a href="energy.html">Energy</a>
@@ -20,55 +22,115 @@
     </nav>
   </header>
 
-  <!-- HERO -->
-  <section>
-    <h2>System Intake Portal</h2>
-    <p>Submit structured inquiries into the NEXANNA operational system.</p>
-  </section>
+  <main>
 
-  <!-- CONTACT FORM -->
-  <section>
+    <section>
+      <h2>System Intake Portal</h2>
 
-    <form
-      name="nexanna-intake"
-      method="POST"
-      data-netlify="true"
-      action="/pages/success.html">
+      <p>
+        Submit your inquiry through the structured intake process.
+      </p>
+    </section>
 
-      <!-- REQUIRED FOR NETLIFY -->
-      <input type="hidden" name="form-name" value="nexanna-intake">
+    <section>
 
-      <!-- NAME -->
-      <label>Name</label>
-      <input type="text" name="name" required>
+      <form
+        name="nexanna-intake"
+        method="POST"
+        action="/pages/success.html"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field">
 
-      <!-- EMAIL -->
-      <label>Email</label>
-      <input type="email" name="email" required>
+        <!-- Required by Netlify -->
+        <input type="hidden" name="form-name" value="nexanna-intake">
 
-      <!-- CATEGORY -->
-      <label>Category</label>
-      <select name="category" required>
-        <option value="energy">Energy & Mining</option>
-        <option value="ai">AI & IT Systems</option>
-        <option value="verve">Verve Wellness</option>
-        <option value="investment">Investment Desk</option>
-      </select>
+        <!-- Spam protection -->
+        <p hidden>
+          <label>
+            Do not fill this field:
+            <input name="bot-field">
+          </label>
+        </p>
 
-      <!-- MESSAGE -->
-      <label>Message</label>
-      <textarea name="message" rows="6" required></textarea>
+        <div>
+          <label for="name">Name</label><br>
+          <input
+            id="name"
+            type="text"
+            name="name"
+            required>
+        </div>
 
-      <!-- SUBMIT -->
-      <button type="submit">Submit Request</button>
+        <br>
 
-    </form>
+        <div>
+          <label for="email">Email</label><br>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            required>
+        </div>
 
-  </section>
+        <br>
 
-  <!-- FOOTER -->
+        <div>
+          <label for="category">Category</label><br>
+
+          <select
+            id="category"
+            name="category"
+            required>
+
+            <option value="">Select an option</option>
+
+            <option value="Energy & Mining">
+              Energy & Mining
+            </option>
+
+            <option value="AI & IT Systems">
+              AI & IT Systems
+            </option>
+
+            <option value="Verve Wellness">
+              Verve Wellness
+            </option>
+
+            <option value="Investment Desk">
+              Investment Desk
+            </option>
+
+          </select>
+        </div>
+
+        <br>
+
+        <div>
+          <label for="message">Message</label><br>
+
+          <textarea
+            id="message"
+            name="message"
+            rows="6"
+            required></textarea>
+        </div>
+
+        <br>
+
+        <button type="submit">
+          Submit Request
+        </button>
+
+      </form>
+
+    </section>
+
+  </main>
+
   <footer>
-    <p>© 2026 NEXANNA. Structured systems for capital, energy, and intelligence.</p>
+    <p>
+      © 2026 NEXANNA. Structured systems for energy, intelligence, and human infrastructure.
+    </p>
   </footer>
 
 </body>
