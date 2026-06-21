@@ -1,23 +1,75 @@
-<form
-  name="nexanna-intake"
-  method="POST"
-  data-netlify="true"
-  action="/pages/success.html">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NEXANNA | Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
 
-  <input type="hidden" name="form-name" value="nexanna-intake">
+<body>
 
-  <input type="text" name="name" placeholder="Name" required>
+  <!-- HEADER -->
+  <header>
+    <h1>NEXANNA SYSTEM</h1>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="energy.html">Energy</a>
+      <a href="ai.html">AI Systems</a>
+      <a href="verve.html">Verve</a>
+    </nav>
+  </header>
 
-  <input type="email" name="email" placeholder="Email" required>
+  <!-- HERO -->
+  <section>
+    <h2>System Intake Portal</h2>
+    <p>Submit structured inquiries into the NEXANNA operational system.</p>
+  </section>
 
-  <select name="category">
-    <option value="energy">Energy</option>
-    <option value="ai">AI</option>
-    <option value="verve">Verve</option>
-  </select>
+  <!-- CONTACT FORM -->
+  <section>
 
-  <textarea name="message" placeholder="Message"></textarea>
+    <form
+      name="nexanna-intake"
+      method="POST"
+      data-netlify="true"
+      action="/pages/success.html">
 
-  <button type="submit">Submit</button>
+      <!-- REQUIRED FOR NETLIFY -->
+      <input type="hidden" name="form-name" value="nexanna-intake">
 
-</form>
+      <!-- NAME -->
+      <label>Name</label>
+      <input type="text" name="name" required>
+
+      <!-- EMAIL -->
+      <label>Email</label>
+      <input type="email" name="email" required>
+
+      <!-- CATEGORY -->
+      <label>Category</label>
+      <select name="category" required>
+        <option value="energy">Energy & Mining</option>
+        <option value="ai">AI & IT Systems</option>
+        <option value="verve">Verve Wellness</option>
+        <option value="investment">Investment Desk</option>
+      </select>
+
+      <!-- MESSAGE -->
+      <label>Message</label>
+      <textarea name="message" rows="6" required></textarea>
+
+      <!-- SUBMIT -->
+      <button type="submit">Submit Request</button>
+
+    </form>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 NEXANNA. Structured systems for capital, energy, and intelligence.</p>
+  </footer>
+
+</body>
+</html>
